@@ -1,0 +1,18 @@
+local ds = game:GetService("DataStoreService"):GetGlobalDataStore()
+game.Players.PlayerAdded:Connect(function(plr)
+	wait()
+	local plrkey = "id_"..plr.UserId
+	local save1 = plr.leaderstats.Example -- change example to your leaderstats' name
+
+	local Saved = ds:GetAsync(plrkey)
+	if Saved then
+		save1.Value = Saved[1]
+	else
+		local NumberForSaving = {save1.Value}
+		ds:GetAsync(plrkey, NumberForSaving)
+	end
+end)
+
+game.Players.PlayerRemoving:Connect(function(plr)
+	ds:SetAsync("id_"..plr.UserId, {plr.leaderstats.Example.Value}) -- change it here too:)
+end)

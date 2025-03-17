@@ -1,0 +1,10 @@
+game.Players.PlayerAdded:Connect(function(Player)
+
+	local leaderstats = Instance.new("Folder", Player)
+	leaderstats.Name = "leaderstats"
+
+	local Kills = Instance.new("IntValue", leaderstats)
+	Kills.Name = "Example"
+	Kills.Value = 0
+
+end)

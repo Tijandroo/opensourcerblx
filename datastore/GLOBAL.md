@@ -1,0 +1,1 @@
+to get the global datastore working you need the global leaderstats too as they work together. If you know how to code you can edit the global datastore to save basically everything. The global datastores works like this. If you have 1 coin in your main place or a place under the same game, and you go to another game you keep the same value. 
